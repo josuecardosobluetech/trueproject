@@ -357,13 +357,13 @@ body {
 
 /* Prose */
 .reader-prose {
-  padding: 36px 24px 80px;
+  padding: 36px 24px 110px;
 }
 
 @media (min-width: 520px) {
   .reader-title-block { padding: 64px 48px 52px; }
   .reader-title { font-size: 1.95rem; }
-  .reader-prose { padding: 52px 52px 96px; }
+  .reader-prose { padding: 52px 52px 120px; }
 }
 
 .reader-prose p {
@@ -458,29 +458,49 @@ body {
 .reader-page--active { display: block; }
 
 .reader-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px 14px;
+}
+
+.reader-nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 24px 60px;
-  max-width: 680px;
-  margin: 0 auto;
-  gap: 12px;
+  width: 100%;
+  max-width: 640px;
+  gap: 8px;
 }
 
 .reader-nav-btn {
   background: none;
   border: 1.5px solid var(--border);
   border-radius: 6px;
-  padding: 8px 16px;
+  padding: 8px 14px;
   font-family: var(--font);
-  font-size: .82rem;
+  font-size: .8rem;
   color: var(--ink-2);
   cursor: pointer;
-  transition: border-color .2s, color .2s;
+  transition: border-color .2s, color .2s, background .2s;
   white-space: nowrap;
 }
 .reader-nav-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
 .reader-nav-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+.reader-nav-btn.bookmarked {
+  background: #fdf5ef;
+  border-color: var(--accent);
+  color: var(--accent);
+}
 
 .reader-nav-label {
   font-family: 'Cinzel', Georgia, serif;
@@ -490,7 +510,6 @@ body {
   text-transform: uppercase;
   color: var(--ink-3);
   text-align: center;
-  flex: 1;
 }
 
 .hr-ornament {
