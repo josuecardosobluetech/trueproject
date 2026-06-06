@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const LIB_ROOT = path.join(__dirname, '..');
+const LIB_ROOT = path.join(__dirname, '..', 'biblioteca');
 const REPORTS_DIR = path.join(__dirname, 'reports');
 const VIEWER_REPORTS_DIR = path.join(__dirname, '..', 'viewer', 'reports');
 

@@ -4,6 +4,15 @@ let currentReportId = null;
 let paginationState = { pages: [], current: 0 };
 let readerKeydownBound = false;
 
+function saveProgress(page) {
+  if (!currentReportId || page === 0) return;
+  localStorage.setItem('p_' + currentReportId, JSON.stringify({ page, total: paginationState.pages.length }));
+}
+
+function loadProgress(id) {
+  try { return JSON.parse(localStorage.getItem('p_' + id)); } catch { return null; }
+}
+
 const complexityLabels  = ['Introdutória', 'Acessível', 'Moderada', 'Avançada'];
 const depthLabels       = ['Panorâmica', 'Moderada', 'Profunda', 'Exaustiva'];
 const languageLabels    = ['Conversacional', 'Acessível', 'Semi-técnica', 'Técnica'];
@@ -282,6 +291,7 @@ function showPage(n) {
   const total = paginationState.pages.length;
   n = Math.max(0, Math.min(n, total - 1));
   paginationState.current = n;
+  saveProgress(n);
 
   document.querySelectorAll('.reader-page').forEach((el, i) => {
     el.classList.toggle('reader-page--active', i === n);
@@ -425,17 +435,22 @@ function buildReportCard(report) {
     p.focus  ? p.focus.replace('enfase-', 'Ênfase ').replace('equilibrado', 'Equilibrado') : 'Equilibrado'
   ].join(' · ');
 
+  const saved = loadProgress(report.id);
+  const progressBadge = saved && saved.page > 0
+    ? `<span class="progress-badge">Página ${saved.page + 1} de ${saved.total}</span>`
+    : '';
+
   const card = document.createElement('div');
   card.className = 'report-card';
   card.innerHTML = `
     <div class="report-card-body">
-      <div class="report-date">${formatDate(report.date)}</div>
+      <div class="report-date">${formatDate(report.date)}${progressBadge}</div>
       <div class="report-question" title="${report.question}">${report.question}</div>
       <div class="report-meta">${meta}</div>
       <div class="report-topics">${topicTags}${more}</div>
     </div>
     <div class="report-actions">
-      <button class="btn-open">Abrir</button>
+      <button class="btn-open">${saved && saved.page > 0 ? 'Continuar' : 'Abrir'}</button>
       <button class="btn-delete">Excluir</button>
     </div>`;
 
@@ -453,6 +468,8 @@ async function openReport(id, question) {
 
     currentReportId = id;
     renderReader(data.content, data.question || question);
+    const saved = loadProgress(id);
+    if (saved && saved.page > 0) showPage(saved.page);
     stopLoading();
     goToStep(3);
   } catch (err) { stopLoading(); showError(err.message); }
