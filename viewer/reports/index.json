@@ -1,0 +1,30 @@
+{
+  "reports": [
+    {
+      "id": "1780707799359",
+      "question": "o que os primeiros cristão realmente acreditavam sobre Maria, mãe de Jesus. E o que os protestantes alegam sobre isso?",
+      "date": "2026-06-06T01:03:19.361Z",
+      "topicCount": 9,
+      "topics": [
+        "Maria nos escritos dos Pais Apostólicos",
+        "Theotokos: Maria como Mãe de Deus",
+        "Virgindade perpétua de Maria nos Padres",
+        "Doutrina mariana definida pelo Concílio de Trento",
+        "Vaticano II e Maria: Mãe da Igreja",
+        "Lutero e a visão reformada sobre Maria",
+        "Confissões protestantes e o silêncio mariano",
+        "Möhler: diferença fundamental católico-protestante sobre Maria",
+        "Canísio e a defesa catequética da veneração mariana"
+      ],
+      "parameters": {
+        "complexity": 3,
+        "historicalDepth": 4,
+        "language": 2,
+        "length": 5,
+        "focus": "equilibrado",
+        "tone": "narrativo",
+        "model": "sonnet"
+      }
+    }
+  ]
+}

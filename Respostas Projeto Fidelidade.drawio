@@ -1,0 +1,180 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="xptFZTcvZ0FUAiZjNBZw">
+    <mxGraphModel dx="1360" dy="864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dhUe248yYC8VjW0bqEqj-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Livros&lt;div&gt;(Banco de Dados)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="780" y="817" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-7" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="160" x="420" y="977" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-6" edge="1" parent="dhUe248yYC8VjW0bqEqj-7" source="dhUe248yYC8VjW0bqEqj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-2" parent="dhUe248yYC8VjW0bqEqj-7" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Catolicismo" vertex="1">
+          <mxGeometry height="60" width="100" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-3" parent="dhUe248yYC8VjW0bqEqj-7" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Livros que carregam a teologia, visão, tradição e religião Catolica" vertex="1">
+          <mxGeometry height="50" width="160" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-8" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="150" width="160" x="590" y="977" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-9" edge="1" parent="dhUe248yYC8VjW0bqEqj-8" source="dhUe248yYC8VjW0bqEqj-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-10" parent="dhUe248yYC8VjW0bqEqj-8" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Contra-Reforma" vertex="1">
+          <mxGeometry height="60" width="100" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-11" parent="dhUe248yYC8VjW0bqEqj-8" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Livros da Igreja Católica que buscam ir em contra-direção dos ensinamentos protestantes" vertex="1">
+          <mxGeometry height="62" width="160" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-12" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="160" x="760" y="977" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-13" edge="1" parent="dhUe248yYC8VjW0bqEqj-12" source="dhUe248yYC8VjW0bqEqj-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-14" parent="dhUe248yYC8VjW0bqEqj-12" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Não Partidários" vertex="1">
+          <mxGeometry height="60" width="100" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-15" parent="dhUe248yYC8VjW0bqEqj-12" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Livros que carregam a teologia, visão, tradição e religião Catolica" vertex="1">
+          <mxGeometry height="50" width="160" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-16" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="160" x="920" y="977" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-17" edge="1" parent="dhUe248yYC8VjW0bqEqj-16" source="dhUe248yYC8VjW0bqEqj-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-18" parent="dhUe248yYC8VjW0bqEqj-16" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Patrística" vertex="1">
+          <mxGeometry height="60" width="100" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-19" parent="dhUe248yYC8VjW0bqEqj-16" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Livros dos Pais da igreja até 1054 (Até o Cisma do oriente)" vertex="1">
+          <mxGeometry height="50" width="160" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-20" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="150" width="160" x="1090" y="977" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-21" edge="1" parent="dhUe248yYC8VjW0bqEqj-20" source="dhUe248yYC8VjW0bqEqj-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-22" parent="dhUe248yYC8VjW0bqEqj-20" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Protestantes" vertex="1">
+          <mxGeometry height="60" width="100" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-23" parent="dhUe248yYC8VjW0bqEqj-20" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Livros que falam a cerca de doutrinas reformadas e os motivos do cisma com a Igreja Católica." vertex="1">
+          <mxGeometry height="62" width="160" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-24" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="927" />
+              <mxPoint x="500" y="927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-25" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="927" />
+              <mxPoint x="670" y="927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-26" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-27" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="927" />
+              <mxPoint x="1170" y="927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-28" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="927" />
+              <mxPoint x="1000" y="927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-80" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-29" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1;fontSize=18;" value="NOTEBOOKLM" vertex="1">
+          <mxGeometry height="60" width="220" x="590" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-30" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Regras de busca" vertex="1">
+          <mxGeometry height="60" width="140" x="620" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-32" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Mapa de conteúdos" vertex="1">
+          <mxGeometry height="60" width="140" x="790" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-33" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Análise dos&lt;br&gt;Parâmetros&lt;div&gt;de resposta&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="960" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-34" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Estrutura de resposta" vertex="1">
+          <mxGeometry height="60" width="140" x="1130.5" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-40" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-36" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Arquivo .md de regras de busca" vertex="1">
+          <mxGeometry height="70" width="110" x="635" y="557" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-47" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-37" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Arquivo .md com o mapa de conteúdos" vertex="1">
+          <mxGeometry height="70" width="125" x="797.5" y="557" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-38" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Pesquisa do Conteúdo" vertex="1">
+          <mxGeometry height="70" width="200" x="740" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-39" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-46" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-48" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-88" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=75;exitDy=70;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-50" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=20;position=0.49;" value="1. Prompt com &quot;Dúvida&quot;" vertex="1">
+          <mxGeometry height="70" width="150" x="550" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-52" parent="1" style="whiteSpace=wrap;html=1;" value="Dúvida:&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-56" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Resposta Completa" vertex="1">
+          <mxGeometry height="70" width="200" x="490" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-57" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Resposta dos conteúdos&lt;div&gt;que podem ser abordados&lt;/div&gt;&lt;div&gt;na pergunta principal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="270" x="730" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-83" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="dhUe248yYC8VjW0bqEqj-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-61" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=20;position=0.49;" value="2.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Prompt com conteúdos para abordar na resposta e parâmetros de retorno&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="714" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-66" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Arquivo .md com a estrutura das respostas" vertex="1">
+          <mxGeometry height="70" width="133" x="1134" y="557" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-84" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.535;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dhUe248yYC8VjW0bqEqj-86" edge="1" parent="1" source="dhUe248yYC8VjW0bqEqj-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=180;entryDy=35;entryPerimeter=0;" target="dhUe248yYC8VjW0bqEqj-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

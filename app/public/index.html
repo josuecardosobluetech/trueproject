@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Expandida</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ───────────────────────── STEP 1: Pergunta ───────────────────────── -->
+<div id="step-1" class="step active">
+  <div class="step-container">
+    <header class="app-header">
+      <div class="app-logo">✦ Biblioteca Expandida</div>
+      <p class="app-sub">Pesquisa teológica comparativa</p>
+    </header>
+
+    <div class="card">
+      <div class="field">
+        <label class="field-label" for="question">Qual é sua dúvida teológica?</label>
+        <textarea id="question" class="textarea" rows="4"
+          placeholder="Ex: Por que os católicos acreditam no purgatório e o que realmente é?"></textarea>
+      </div>
+
+      <div class="params-block">
+        <div class="params-toggle-row">
+          <span class="params-title">Parâmetros do mini-livro</span>
+          <label class="switch">
+            <input type="checkbox" id="use-default" checked>
+            <span class="switch-track"></span>
+            <span class="switch-label">Usar padrão</span>
+          </label>
+        </div>
+
+        <div id="params-panel" class="params-panel hidden">
+          <div class="param-row">
+            <div class="param-info">
+              <span class="param-name">Complexidade</span>
+              <span class="param-value" id="lbl-complexity">Moderada</span>
+            </div>
+            <input type="range" class="slider" min="1" max="4" value="3" id="sl-complexity">
+            <div class="slider-ends"><span>Introdutória</span><span>Avançada</span></div>
+          </div>
+
+          <div class="param-row">
+            <div class="param-info">
+              <span class="param-name">Profundidade Histórica</span>
+              <span class="param-value" id="lbl-depth">Profunda</span>
+            </div>
+            <input type="range" class="slider" min="1" max="4" value="3" id="sl-depth">
+            <div class="slider-ends"><span>Panorâmica</span><span>Exaustiva</span></div>
+          </div>
+
+          <div class="param-row">
+            <div class="param-info">
+              <span class="param-name">Linguagem</span>
+              <span class="param-value" id="lbl-language">Acessível</span>
+            </div>
+            <input type="range" class="slider" min="1" max="4" value="2" id="sl-language">
+            <div class="slider-ends"><span>Conversacional</span><span>Técnica</span></div>
+          </div>
+
+          <div class="param-row">
+            <div class="param-info">
+              <span class="param-name">Extensão</span>
+              <span class="param-value" id="lbl-length">Expandido (~4.000 palavras)</span>
+            </div>
+            <input type="range" class="slider" min="1" max="5" value="3" id="sl-length">
+            <div class="slider-ends"><span>Compacto</span><span>Completo</span></div>
+          </div>
+
+          <div class="param-row param-row--select">
+            <div class="param-info">
+              <span class="param-name">Foco de Tradição</span>
+            </div>
+            <select id="sl-focus" class="select">
+              <option value="equilibrado">Equilibrado</option>
+              <option value="enfase-catolica">Ênfase Católica</option>
+              <option value="enfase-reformada">Ênfase Reformada</option>
+              <option value="enfase-patristica">Ênfase Patrística</option>
+              <option value="enfase-neutra">Ênfase Neutra</option>
+            </select>
+          </div>
+
+          <div class="param-row param-row--select">
+            <div class="param-info">
+              <span class="param-name">Tom</span>
+            </div>
+            <select id="sl-tone" class="select">
+              <option value="narrativo">Narrativo</option>
+              <option value="analitico">Analítico</option>
+              <option value="devocional">Devocional</option>
+              <option value="comparativo">Comparativo</option>
+            </select>
+          </div>
+
+          <div class="param-row param-row--select">
+            <div class="param-info">
+              <span class="param-name">Modelo de IA</span>
+              <span class="param-value" id="lbl-model-cost">~$0,05–0,10 / relatório</span>
+            </div>
+            <select id="sl-model" class="select">
+              <option value="sonnet">Sonnet — equilíbrio qualidade/custo (padrão)</option>
+              <option value="haiku">Haiku — mais rápido e barato</option>
+              <option value="opus">Opus — máxima qualidade (mais caro)</option>
+            </select>
+            <div class="model-hint" id="model-hint">Claude Sonnet: excelente para teologia, ~5× mais barato que Opus.</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="btn-topics" class="btn-primary">Explorar tópicos →</button>
+    </div>
+
+    <div class="reports-link-row">
+      <button class="btn-reports-link" onclick="showReports(true)">
+        ☰ Meus relatórios
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────────────────── STEP 2: Tópicos ───────────────────────── -->
+<div id="step-2" class="step">
+  <div class="step-bar">
+    <button class="btn-back" onclick="goToStep(1)">← Voltar</button>
+    <span class="app-logo-sm">✦ Biblioteca Expandida</span>
+    <span></span>
+  </div>
+
+  <div class="step-container">
+    <div class="step2-header">
+      <h2 class="step2-title">Selecione os tópicos</h2>
+      <p id="step2-question" class="step2-question"></p>
+    </div>
+
+    <div class="topics-actions">
+      <button class="btn-text" onclick="selectAll()">Selecionar todos</button>
+      <span class="dot-sep">·</span>
+      <button class="btn-text" onclick="deselectAll()">Desmarcar todos</button>
+    </div>
+
+    <div id="topics-grid" class="topics-grid"></div>
+
+    <div class="step2-footer">
+      <span id="selected-count" class="selected-count">0 tópicos selecionados</span>
+      <button id="btn-generate" class="btn-primary" disabled>Gerar mini-livro →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────────────────── STEP 3: Leitor ───────────────────────── -->
+<div id="step-3" class="step">
+  <div class="reader-bar">
+    <button class="btn-back" onclick="goToStep(1)">← Nova pesquisa</button>
+    <span class="app-logo-sm">✦ Biblioteca Expandida</span>
+    <span></span>
+  </div>
+  <div id="reader" class="reader"></div>
+</div>
+
+<!-- ───────────────────────── TELA DE RELATÓRIOS ───────────────────────── -->
+<div id="reports-screen" class="step">
+  <div class="step-bar">
+    <button class="btn-back" onclick="showReports(false)">← Voltar</button>
+    <span class="app-logo-sm">✦ Biblioteca Expandida</span>
+    <span></span>
+  </div>
+
+  <div class="step-container">
+    <div class="step2-header">
+      <h2 class="step2-title">Meus Relatórios</h2>
+      <p class="step2-question">Mini-livros teológicos gerados anteriormente</p>
+    </div>
+
+    <div id="reports-list" class="reports-list">
+      <p class="reports-empty hidden" id="reports-empty">Nenhum relatório gerado ainda.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────────────────── LOADING ───────────────────────── -->
+<div id="loading" class="loading hidden">
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <p id="loading-text" class="loading-text">Analisando a biblioteca...</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
