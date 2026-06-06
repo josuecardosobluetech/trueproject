@@ -64,6 +64,40 @@ function loadProgress(id) {
   try { return JSON.parse(localStorage.getItem('p_' + id)); } catch { return null; }
 }
 
+function saveBookmark(id, page) {
+  localStorage.setItem('b_' + id, page.toString());
+}
+
+function loadBookmark(id) {
+  const v = localStorage.getItem('b_' + id);
+  return v !== null ? parseInt(v) : null;
+}
+
+function clearBookmark(id) {
+  localStorage.removeItem('b_' + id);
+}
+
+function toggleBookmark() {
+  if (!currentReportId) return;
+  const current = paginationState.current;
+  const existing = loadBookmark(currentReportId);
+  if (existing === current) {
+    clearBookmark(currentReportId);
+  } else {
+    saveBookmark(currentReportId, current);
+  }
+  updateBookmarkButton();
+}
+
+function updateBookmarkButton() {
+  const btn = document.getElementById('btn-bookmark');
+  if (!btn || !currentReportId) return;
+  const bookmarked = loadBookmark(currentReportId);
+  const isCurrent = bookmarked === paginationState.current;
+  btn.classList.toggle('bookmarked', isCurrent);
+  btn.textContent = isCurrent ? '★ Marcada' : '☆ Marcar';
+}
+
 /* ─── Utilities ─── */
 function showLoading(msg) {
   document.getElementById('loading-text').textContent = msg || 'Carregando...';
@@ -175,6 +209,7 @@ function showPage(n) {
   if (label) label.textContent = `Página ${n + 1} de ${total}`;
   if (prev)  { prev.disabled = (n === 0); prev.onclick = () => showPage(paginationState.current - 1); }
   if (next)  { next.disabled = (n === total - 1); next.onclick = () => showPage(paginationState.current + 1); }
+  updateBookmarkButton();
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -207,11 +242,15 @@ function renderReader(markdownContent, question) {
   nav.className = 'reader-nav';
   nav.id = 'reader-nav';
   nav.innerHTML = `
-    <button class="reader-nav-btn" id="nav-prev">← Página anterior</button>
     <span class="reader-nav-label" id="nav-label">Página 1 de ${pages.length}</span>
-    <button class="reader-nav-btn" id="nav-next">Próxima página →</button>
+    <div class="reader-nav-row">
+      <button class="reader-nav-btn" id="nav-prev">← Anterior</button>
+      <button class="reader-nav-btn" id="btn-bookmark">☆ Marcar</button>
+      <button class="reader-nav-btn" id="nav-next">Próxima →</button>
+    </div>
   `;
   reader.appendChild(nav);
+  nav.querySelector('#btn-bookmark').addEventListener('click', toggleBookmark);
 
   showPage(0);
 
