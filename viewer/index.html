@@ -53,6 +53,16 @@
 /* ─── State ─── */
 let paginationState = { pages: [], current: 0 };
 let readerKeydownBound = false;
+let currentReportId = null;
+
+function saveProgress(page) {
+  if (!currentReportId || page === 0) return;
+  localStorage.setItem('p_' + currentReportId, JSON.stringify({ page, total: paginationState.pages.length }));
+}
+
+function loadProgress(id) {
+  try { return JSON.parse(localStorage.getItem('p_' + id)); } catch { return null; }
+}
 
 /* ─── Utilities ─── */
 function showLoading(msg) {
@@ -153,6 +163,7 @@ function showPage(n) {
   const total = paginationState.pages.length;
   n = Math.max(0, Math.min(n, total - 1));
   paginationState.current = n;
+  saveProgress(n);
 
   document.querySelectorAll('.reader-page').forEach((el, i) => {
     el.classList.toggle('reader-page--active', i === n);
@@ -226,17 +237,22 @@ function buildReportCard(report) {
     p.focus ? p.focus.replace('enfase-', 'Ênfase ').replace('equilibrado', 'Equilibrado') : 'Equilibrado'
   ].join(' · ');
 
+  const saved = loadProgress(report.id);
+  const progressBadge = saved && saved.page > 0
+    ? `<span class="progress-badge">Página ${saved.page + 1} de ${saved.total}</span>`
+    : '';
+
   const card = document.createElement('div');
   card.className = 'report-card';
   card.innerHTML = `
     <div class="report-card-body">
-      <div class="report-date">${formatDate(report.date)}</div>
+      <div class="report-date">${formatDate(report.date)}${progressBadge}</div>
       <div class="report-question" title="${escapeHtml(report.question)}">${escapeHtml(report.question)}</div>
       <div class="report-meta">${meta}</div>
       <div class="report-topics">${topicTags}${more}</div>
     </div>
     <div class="report-actions">
-      <button class="btn-open">Abrir</button>
+      <button class="btn-open">${saved && saved.page > 0 ? 'Continuar' : 'Abrir'}</button>
     </div>`;
 
   card.querySelector('.btn-open').addEventListener('click', () => openReport(report.id, report.question));
@@ -272,7 +288,10 @@ async function openReport(id, fallbackQuestion) {
   try {
     const res  = await fetch(`reports/${id}.json`);
     const data = await res.json();
+    currentReportId = id;
     renderReader(data.content, data.question || fallbackQuestion);
+    const saved = loadProgress(id);
+    if (saved && saved.page > 0) showPage(saved.page);
     stopLoading();
     showScreen('screen-reader');
     history.pushState(null, '', `#report/${id}`);
@@ -283,6 +302,7 @@ async function openReport(id, fallbackQuestion) {
 }
 
 function showList() {
+  currentReportId = null;
   showScreen('screen-list');
   history.pushState(null, '', location.pathname);
 }
@@ -296,7 +316,10 @@ async function handleHash() {
     try {
       const res  = await fetch(`reports/${id}.json`);
       const data = await res.json();
+      currentReportId = id;
       renderReader(data.content, data.question);
+      const saved = loadProgress(id);
+      if (saved && saved.page > 0) showPage(saved.page);
       stopLoading();
       showScreen('screen-reader');
     } catch {

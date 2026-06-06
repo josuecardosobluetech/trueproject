@@ -526,7 +526,19 @@ body {
 
 .report-card-body { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
 
-.report-date { font-size: .72rem; font-weight: 600; color: var(--ink-3); letter-spacing: .04em; text-transform: uppercase; }
+.report-date { font-size: .72rem; font-weight: 600; color: var(--ink-3); letter-spacing: .04em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.progress-badge {
+  background: #f0ebe3;
+  color: var(--accent);
+  border: 1px solid rgba(124,61,40,0.2);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: none;
+}
 
 .report-question {
   font-size: .95rem;
