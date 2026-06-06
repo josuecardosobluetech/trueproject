@@ -1,6 +1,29 @@
 {
   "reports": [
     {
+      "id": "1780769558272",
+      "question": "De onde vem o sinal do crucifixo e quais os argumentos para fazê-lo?",
+      "date": "2026-06-06T18:12:38.274Z",
+      "topicCount": 6,
+      "topics": [
+        "Origens Bíblicas do Sinal da Cruz",
+        "Primeiros Registros Patrísticos do Gesto",
+        "Defesa Católica do Sinal Contra a Reforma",
+        "Crítica Protestante ao Sinal da Cruz",
+        "Sinal da Cruz na Catequese Histórica",
+        "Cruz como Símbolo Apologético nos Primeiros Séculos"
+      ],
+      "parameters": {
+        "complexity": 3,
+        "historicalDepth": 3,
+        "language": 2,
+        "length": 3,
+        "focus": "equilibrado",
+        "tone": "narrativo",
+        "model": "sonnet"
+      }
+    },
+    {
       "id": "1780707799359",
       "question": "o que os primeiros cristão realmente acreditavam sobre Maria, mãe de Jesus. E o que os protestantes alegam sobre isso?",
       "date": "2026-06-06T01:03:19.361Z",
